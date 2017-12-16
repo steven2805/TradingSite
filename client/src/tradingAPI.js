@@ -26,7 +26,7 @@ var requestComplete = function(){
 
 
 window.addEventListener("load",function(event){
-    var companies = new Companies(99);
+    var companies = new Companies("null");
 
     var testing = companies.listing;
     console.log(testing);

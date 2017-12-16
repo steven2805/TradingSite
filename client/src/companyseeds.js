@@ -2,9 +2,14 @@
 // Ideally this would be pulled from a database or api depending which you would require
 
 
-function Companies(testing){
-  this.listing = {"apple":"AAPPL","Microsoft":"MRSF","Google":"goog"};
-    this.testing = testing;
+function Companies(input){
+  if('null' != input ){
+    this.listing = input;
+  }
+  else{
+      this.listing = {"apple":"AAPPL","Microsoft":"MRSF","Google":"goog"};
+  }
+
 };
 
 
