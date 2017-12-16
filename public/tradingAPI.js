@@ -24,9 +24,16 @@ var requestComplete = function(){
 
 
 window.addEventListener("load",function(event){
-    var companies = new Companies();
+    var companies = new Companies(99);
 
-    console.log(companies.listing);
+    var testing = companies.listing;
+    console.log(testing);
+
+    for(var i in testing){
+        console.log(i);
+    }
+
+    // console.log(companies.listing(1));
 
     console.log("testing");
     var resultURL = urlBuilder("ea");
