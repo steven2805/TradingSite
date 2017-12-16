@@ -1,5 +1,5 @@
 config = {
-    entry: __dirname + '/src/tradingAPI.js',
+    entry: __dirname + '/src/index.js',
     output: {
         filename: 'bundle.js',
         path: __dirname + '/build'
