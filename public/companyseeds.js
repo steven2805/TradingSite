@@ -1,9 +1,18 @@
 
+function Companies() {
+    this.listing = populateCompanyList();
+}
 
 
-CompanySeeds = function (name, ticker) {
-    this.name = name;
-    this.ticker = ticker;
-};
 
-module.exports = CompanySeeds;
+populateCompanyList = function(){
+    var company = {"apple":"AAPPL"};
+    return company;
+
+
+}
+
+
+// module.exports(Companies());
+
+

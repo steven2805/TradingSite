@@ -1,4 +1,4 @@
-// var CompanySeeds = require('./companyseeds');
+// var Companies = require('./companyseeds');
 
 
 var makeRequest = function(url, callback){
@@ -24,6 +24,9 @@ var requestComplete = function(){
 
 
 window.addEventListener("load",function(event){
+    var companies = new Companies();
+
+    console.log(companies.listing);
 
     console.log("testing");
     var resultURL = urlBuilder("ea");
