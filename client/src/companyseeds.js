@@ -7,7 +7,7 @@ function Companies(input){
     this.listing = input;
   }
   else{
-      this.listing = {"apple":"AAPPL","Microsoft":"MRSF","Google":"goog"};
+      this.listing = {"apple":"ea","Microsoft":"MRSF","Google":"goog"};
   }
 
 };

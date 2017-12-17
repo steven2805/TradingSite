@@ -1,5 +1,9 @@
 var Companies = require("./companyseeds.js");
-var APICalling = require("./tradingAPI");
+var tradingAPI = require("./tradingAPI");
+// var charting = require("./charting");
+
+
+// TODO change li to buttons and change ul to Div
 
 populateList = function(){
     console.log('this is the populate list');
@@ -12,7 +16,7 @@ populateList = function(){
         li.setAttribute('id', companies.listing[i]);
         ul.appendChild(li);
     }
-    createListeners(companies);
+    createListeners();
 
 };
 
@@ -23,14 +27,27 @@ createListeners = function(){
         console.log(i);
         element[i].addEventListener("click", function(event){
             console.log(event.target.id);
+            apiRequesting(event.target.id);
+            // testAPI(event.target.id);
         })
     }
 
 };
 
+apiRequesting = function(ticker){
+    var data = tradingAPI(ticker)
+    console.log(data, 'data from apiRequesting')
+    tradingAPI(ticker).then(function(data) {
+        console.log(data, 'data from testAPI')
+    }, function(error) {
+        console.log(error);
+    })
 
-callSomething = function(element){
-     console.log("something was clicked",element);
+};
+
+dataReceived = function(data){
+    //do something with data
+    console.log(data, "this is out of the loop");
 };
 
 
@@ -39,4 +56,5 @@ window.addEventListener("load",function(event){
     populateList();
 
 });
+
 
