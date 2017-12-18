@@ -1,6 +1,6 @@
 var Companies = require("./companyseeds.js");
 var tradingAPI = require("./tradingAPI");
-// var charting = require("./charting");
+var charting = require("./charting");
 
 
 // TODO change li to buttons and change ul to Div
@@ -35,10 +35,10 @@ createListeners = function(){
 };
 
 apiRequesting = function(ticker){
-    var data = tradingAPI(ticker)
-    console.log(data, 'data from apiRequesting')
+    // var data = tradingAPI(ticker)
     tradingAPI(ticker).then(function(data) {
-        console.log(data, 'data from testAPI')
+        // console.log(data, 'data from testAPI')
+        dataReceived(data);
     }, function(error) {
         console.log(error);
     })
@@ -48,6 +48,8 @@ apiRequesting = function(ticker){
 dataReceived = function(data){
     //do something with data
     console.log(data, "this is out of the loop");
+    charting("something for charting ");
+
 };
 
 
