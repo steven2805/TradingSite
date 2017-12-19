@@ -1,3 +1,4 @@
+var charting = require('./charting.js');
 
 
 
@@ -7,15 +8,20 @@ function dataFormatter(data){
     console.log(timeData, "this is the time data output");
     var dayData = days(timeData);
     var openArray = [];
+    var lowArray = [];
+    var highArray = [];
     var closeArray = [];
 
     for(var i = 0; i<Object.values(timeData).length; i ++){
-        var open = openData(Object.values(timeData)[i]);
-        openArray.push(open);
-
+        var data = sortData(Object.values(timeData)[i]);
+        openArray.push(data[0]);
+        console.log(openArray, "this is the open array", i);
+        lowArray.push(data[1]);
+        highArray.push(data[2]);
+        closeArray.push(data[3]);
     }
-
-    console.log(openArray, open, 'array information');
+    charting(dayData,openArray,lowArray,highArray,closeArray);
+    // charting(openArray);
 
 }
 
@@ -27,8 +33,13 @@ function days(data){
     return daysArray;
 }
 
-function openData(data){
-    return Object.values(data)[0];
+function sortData(input){
+    var data = [];
+    data.push(Object.values(input)[0]);
+    data.push(Object.values(input)[1]);
+    data.push(Object.values(input)[2]);
+    data.push(Object.values(input)[3]);
+    return data;
 }
 
 
