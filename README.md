@@ -8,7 +8,7 @@ Main features:
   API intigration
   Information display
   Sortable information display
-  Javascript, GraphQL, AlphaVantage API (Stock trading data), HTML, CSS 
+  Javascript, Ploty graphs, AlphaVantage API (Stock trading data), HTML, CSS 
     
 Setup:
   NPM Install, 
