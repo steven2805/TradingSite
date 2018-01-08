@@ -1,8 +1,8 @@
 # TradingSite
 
 Brief description:
-  Bulding a functional website to diaply information from a stock Trading API, 
-  sortable information with a managable portfolio option.
+  Building a functional website to dispaly information from a stock Trading API, 
+  sortable information.
   
 Main features:
   API intigration
